@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Love Login & Banner</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
   body {
     margin: 0;
     font-family: 'Cursive', sans-serif;
@@ -116,7 +115,7 @@
   }
 
   .banner p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
     font-size: 3vw;
     color: #fff;
     margin-top: 10px;
@@ -146,7 +145,7 @@
 <!-- Love Banner -->
 <div class="banner" id="banner">
   <h1>Tamim ❤️ Tisha</h1>
-    <p>I love u meri jan 🥺 Tumi amar jibon take bodle diyecho. Tumake chara amar akhon ar bachte icche kore na amar sob sopno akhon tumake niye🥺 kawke ato ta vhalo basa jai tumake na basle aita hoito ami jantam na. Amar jibon ar protita muhurte tumake ami amar pase cai. Duniyar sobaike chere dibo sudhu tumake pawar jonno🥺 tumi sudhu amake vhalo bese amar pase theke jeo 😭. Tumake ami amar kace vhalo bese sara jibon ar jonno rekhe dibo😭 Amader moddhe hajar bar jhogea hole ami tumake hajar bar e manabo sorry bolbo ador korbo  tobu o amar kace tumi theke jeo🥺 Akta somoy chilo jokhon amra kotha e boltam na ar akhon akjonke chara bachbo na.Tumake pabar asai jibon ar prothom kunu meyer jonno cokh ar jol fellam ar vhaggo kore tumake peye o gelam 😭 vhabi ne je pabo, kunu din o ami tumake harate cai na.Ami amar sob tuku diye tumake vhalo basbo. Tumar maa babar theke hajar gun besi vhalo basa dibo .Amar sobta jore aco tumi . Jedin tumake peye jabo harnur voi thakbe na ar oidin hobe amar sobche anonder din, sara duniya ke bolbo Tisha sudhu amar 😭 .Sob sesh a akta e kotha tumake ami pagol ar moton vhalobasi sara jibon basbo ar kotha dilam amar vhalobasa akta bali poriman o kombe na 🥺 sara ta jibon jhogra hole o ami tumake charbo na. Jibon a kunu din onno meye der chaya te o paa dibo na.amon kunu kosto dibo na je koster karon onno kunu meye. Amar upor ato tuku vhoro rekho 🤗<br>
+  <p>I love u meri jan 🥺 Tumi amar jibon take bodle diyecho. Tumake chara amar akhon ar bachte icche kore na amar sob sopno akhon tumake niye🥺 kawke ato ta vhalo basa jai tumake na basle aita hoito ami jantam na. Amar jibon ar protita muhurte tumake ami amar pase cai. Duniyar sobaike chere dibo sudhu tumake pawar jonno🥺 tumi sudhu amake vhalo bese amar pase theke jeo 😭. Tumake ami amar kace vhalo bese sara jibon ar jonno rekhe dibo😭 Amader moddhe hajar bar jhogea hole ami tumake hajar bar e manabo sorry bolbo ador korbo  tobu o amar kace tumi theke jeo🥺 Akta somoy chilo jokhon amra kotha e boltam na ar akhon akjonke chara bachbo na.Tumake pabar asai jibon ar prothom kunu meyer jonno cokh ar jol fellam ar vhaggo kore tumake peye o gelam 😭 vhabi ne je pabo, kunu din o ami tumake harate cai na.Ami amar sob tuku diye tumake vhalo basbo. Tumar maa babar theke hajar gun besi vhalo basa dibo .Amar sobta jore aco tumi . Jedin tumake peye jabo harnur voi thakbe na ar oidin hobe amar sobche anonder din, sara duniya ke bolbo Tisha sudhu amar 😭 .Sob sesh a akta e kotha tumake ami pagol ar moton vhalobasi sara jibon basbo ar kotha dilam amar vhalobasa akta bali poriman o kombe na 🥺 sara ta jibon jhogra hole o ami tumake charbo na. Jibon a kunu din onno meye der chaya te o paa dibo na.amon kunu kosto dibo na je koster karon onno kunu meye. Amar upor ato tuku vhoro rekho 🤗<br>
   tumake ami onek vhalo basi jan😭</p>
 </div>
 
@@ -166,9 +165,28 @@
     container.appendChild(heart);
   }
 
- 
+  // Login function
+  function login() {
+    const user = document.getElementById("username").value.toLowerCase();
+    const pass = document.getElementById("password").value.toLowerCase();
 
+    if(user === "tisha" && pass === "tamim+tisha") {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("banner").style.display = "block";
+    } else {
+      alert("❌ Wrong username or password! Only for Tamim ❤️ Tisha!");
+    }
+  }
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
