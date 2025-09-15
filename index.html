@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Login & Banner</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Cursive', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Hearts container */
+  .hearts {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.7;
+    animation: float 8s linear infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.8; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(-110vh) translateX(-20px) rotate(90deg); opacity: 0; }
+  }
+
+  /* Login Box */
+  .login-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 320px;
+    backdrop-filter: blur(10px);
+    animation: pop 1s ease;
+    z-index: 2;
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .login-box h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .login-box input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-box button:hover {
+    background: #e60050;
+  }
+
+  /* Banner Section */
+  .banner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 20px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 90%;
+    margin: auto;
+    display: none; /* hidden initially */
+  }
+
+  .banner h1 {
+    font-size: 6vw;
+    color: #fff;
+    margin: 0;
+  }
+
+  .banner p {
+    font-size: 3vw;
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .banner {
+      padding: 20px 15px;
+    }
+    .banner h1 { font-size: 8vw; }
+    .banner p { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- Login Form -->
+<div class="login-box" id="loginBox">
+  <h2>💖 Love Login 💖</h2>
+  <input type="text" id="username" placeholder="Enter Username">
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- Love Banner -->
+<div class="banner" id="banner">
+  <h1>Tamim ❤️ Tisha</h1>
+    <p>I love u meri jan 🥺 Tumi amar jibon take bodle diyecho. Tumake chara amar akhon ar bachte icche kore na amar sob sopno akhon tumake niye🥺 kawke ato ta vhalo basa jai tumake na basle aita hoito ami jantam na. Amar jibon ar protita muhurte tumake ami amar pase cai. Duniyar sobaike chere dibo sudhu tumake pawar jonno🥺 tumi sudhu amake vhalo bese amar pase theke jeo 😭. Tumake ami amar kace vhalo bese sara jibon ar jonno rekhe dibo😭 Amader moddhe hajar bar jhogea hole ami tumake hajar bar e manabo sorry bolbo ador korbo  tobu o amar kace tumi theke jeo🥺 Akta somoy chilo jokhon amra kotha e boltam na ar akhon akjonke chara bachbo na.Tumake pabar asai jibon ar prothom kunu meyer jonno cokh ar jol fellam ar vhaggo kore tumake peye o gelam 😭 vhabi ne je pabo, kunu din o ami tumake harate cai na.Ami amar sob tuku diye tumake vhalo basbo. Tumar maa babar theke hajar gun besi vhalo basa dibo .Amar sobta jore aco tumi . Jedin tumake peye jabo harnur voi thakbe na ar oidin hobe amar sobche anonder din, sara duniya ke bolbo Tisha sudhu amar 😭 .Sob sesh a akta e kotha tumake ami pagol ar moton vhalobasi sara jibon basbo ar kotha dilam amar vhalobasa akta bali poriman o kombe na 🥺 sara ta jibon jhogra hole o ami tumake charbo na. Jibon a kunu din onno meye der chaya te o paa dibo na.amon kunu kosto dibo na je koster karon onno kunu meye. Amar upor ato tuku vhoro rekho 🤗<br>
+  tumake ami onek vhalo basi jan😭</p>
+</div>
+
+<script>
+  // Hearts animation
+  const colors = ["#fff", "#ffb6c1", "#ff69b4", "#ffc0cb"];
+  const container = document.getElementById("hearts");
+  for (let i = 0; i < 50; i++) {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerText = "❤️";
+    heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+    heart.style.left = `${Math.random() * 100}vw`;
+    heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+    heart.style.animationDelay = `${Math.random() * 5}s`;
+    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+    container.appendChild(heart);
+  }
+
+  // Login function
+  function login() {
+    const user = document.getElementById("username").value.toLowerCase();
+    const pass = document.getElementById("password").value.toLowerCase();
+
+    if(user === "tisha" && pass === "tamim+tisha") {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("banner").style.display = "block";
+    } else {
+      alert("❌ Wrong username or password! Only for Tamim ❤️ Tisha!");
+    }
+  }
+</script>
+
+</body>
+</html>
